@@ -35,3 +35,20 @@ df.dropna(thresh=4)
 df.dropna(subset=['C'])
 
 # 4.1.3
+from sklearn.impute import SimpleImputer
+import numpy as np
+
+# 欠損値補完のインスタンスを生成(平均値補完)
+imr = SimpleImputer(missing_values=np.nan, strategy='mean')
+
+# データを適合
+imr = imr.fit(df.values)
+
+# 補完を実行
+imputed_data = imr.transform(df.values)
+imputed_data
+
+df.fillna(df.mean())
+
+# 4.1.4
+# nothing to code
