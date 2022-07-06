@@ -1,3 +1,4 @@
+# 4.1.1
 import pandas as pd
 from io import StringIO
 
@@ -17,6 +18,7 @@ df.isnull().sum()
 # NumPy配列へのアクセスの仕方
 df.values
 
+# 4.1.2
 # 欠損値を含む行を削除
 df.dropna()
 
@@ -31,3 +33,5 @@ df.dropna(thresh=4)
 
 # 特定の列にNaNが含まれている行だけを削除
 df.dropna(subset=['C'])
+
+# 4.1.3
