@@ -29,3 +29,5 @@ df.dropna(how='all')
 # 非NaN値が4つ未満の行を削除
 df.dropna(thresh=4)
 
+# 特定の列にNaNが含まれている行だけを削除
+df.dropna(subset=['C'])
